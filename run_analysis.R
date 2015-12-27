@@ -1,4 +1,3 @@
-
 run_analysis <- function(){ 
 # load test data   
 subject_test = read.table("UCI HAR Dataset/test/subject_test.txt") 
@@ -36,4 +35,3 @@ dataDT <- data.table(data)
 calculatedData<- dataDT[, lapply(.SD, mean), by=c("subjectId", "activity")] 
 write.table(calculatedData, "calculated_tidy_data.txt") 
 } 
-
